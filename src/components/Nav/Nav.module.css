@@ -1,0 +1,111 @@
+.nav {
+position: fixed;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+height: 100%;
+padding: 0 40px 0 30px;
+z-index: 6;
+
+}
+.navBar {
+  height: 60%;
+}
+.profInfo{
+visibility: hidden;
+display: flex;
+margin-top: 60px;
+}
+
+.profName{
+display: flex;
+justify-content: center;
+align-items: center;
+margin-left: 20px;
+color: #F1F1F1;
+font-size: 32px;
+display: none;
+
+}
+.iconsList{
+cursor: pointer;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+height: 100%;
+}
+.icons {
+display: flex;
+padding: 24px;
+align-items: center;
+border-radius: 12px;
+transition: background-color 1s;
+}
+.icons:hover{
+  background-color: #3b486d;
+  font-weight: bold;
+}
+.itemText{
+display: none;
+margin-left: 50px;
+color: #F1F1F1;
+font-size: 36px;
+}
+
+.nav:hover{
+& .navFooter, .itemText, .profName {
+  display: block;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+
+}
+&  .profInfo {
+  visibility: visible;
+  animation-name: floating;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+}
+
+& + .layer {
+  visibility: visible;
+  animation-name: layering;
+}
+}
+
+.layer {
+  background: transparent linear-gradient(90deg, #040404 0%, #040404FA 21%, #04040400 100%) 0% 0% no-repeat padding-box;
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+}
+
+.navFooter {
+display: none;
+flex-direction: column;
+justify-content: space-evenly;
+padding: 24px 20px;
+height: 20%;
+
+color: #858688;
+font-size: 24px;
+font-weight: bold;
+}
+ 
+@keyframes floating {
+  0% { opacity: 0; }
+  50%  { opacity: 0.5; }
+  100%   { opacity: 1; }    
+}
+
+
+@keyframes layering {
+  0% { opacity: 0; width: 0; }
+  50%  { opacity: 0.4; width: 50vw; }
+  100%   { opacity: 0.8;  width: 100vw;}    
+}
