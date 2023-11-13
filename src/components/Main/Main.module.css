@@ -1,3 +1,42 @@
 .main{ 
-height: 755px;
-color: #F1F1F1;}
+font-size: 32px;
+height: 400px;
+}
+.category{
+    color: #858688;
+}
+.movieInfo{
+display: flex;
+color: #F1F1F1;
+
+}
+.description{
+color: #F1F1F1;
+
+}
+.buttons{
+  margin-top: 33px; 
+}
+.playButton{
+    width: 240px;
+    height: 72px;
+    background: #F1F1F1 0% 0% no-repeat padding-box;
+    border-radius: 40px;
+    opacity: 1;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.moreInfoButton{
+    margin-left: 72px;
+    width: 240px;
+    height: 72px;
+    background: transparent linear-gradient(128deg, #2727F5 0%, #001671 100%) 0% 0% no-repeat padding-box;
+border-radius: 40px;
+opacity: 1;
+font-size: 32px;
+font-weight: bold;
+color: #F1F1F1;
+cursor: pointer;
+
+}
