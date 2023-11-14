@@ -1,11 +1,11 @@
 .trending{
-position: fixed;  
-bottom:  0;
+    position: fixed;  
+    bottom:  0;
 }
 .swiper{
     display: flex;
     margin-top: 15px;
-  }
+}
   
 .trendingHeader {
     color: #F1F1F1;
@@ -14,5 +14,4 @@ bottom:  0;
 
 .movies{
     margin-top: 16px;
-    position: absolute;
 }

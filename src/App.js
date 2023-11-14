@@ -8,26 +8,27 @@ import {useEffect} from "react";
 function App() {
 const movieInfo = useSelector((state)=>state.movieData.movieData);
 const playerOn =  useSelector((state)=>state.movieData.movieOn.payload);
-  console.log(movieInfo, 'playerOnplayerOn')
-
 
   useEffect(() => {
     localStorage.setItem("data", JSON.stringify(movieInfo));
   }, [movieInfo]);
 
+
+
   return (
     <div className="App">
-      {playerOn?
-      <video className='img' autoPlay>
-      <source src={movieInfo.VideoUrl}/>
-      </video>
+      {playerOn
+      ?
+        <video className='img' autoPlay>
+        <source src={movieInfo.VideoUrl}/>
+        </video>
       :
-      <img src={require(`./assets/${movieInfo.CoverImage}`)} alt="cover" className='img'/>
+        <img src={require(`./assets/${movieInfo.CoverImage}`)} alt="cover" className='img'/>
       }
-      <Nav />
+        <Nav />
       <div className="page">
-      <Main />
-      <Trending />  
+        <Main />
+        <Trending />  
       </div>     
     </div>
   );

@@ -1,65 +1,63 @@
 .nav {
-background-color: #040404;
-opacity: 0.9;
-position: fixed;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-height: 100%;
-padding: 0 40px 0 30px;
-z-index: 6;
-
+  background-color: #040404;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 40px 0 30px;
+  z-index: 6;
 }
 .navBar {
-height:90%;
+  height:90%;
 }
 .profPic{
-width: 82px;
+  width: 82px;
 }
 .profInfo{
-visibility: hidden;
-display: flex;
-margin-top: 60px;
+  visibility: hidden;
+  display: flex;
+  margin-top: 60px;
 }
 
 .profName{
-display: flex;
-justify-content: center;
-align-items: center;
-margin-left: 20px;
-color: #F1F1F1;
-font-size: 32px;
-display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  color: #F1F1F1;
+  font-size: 32px;
+  display: none;
 
 }
 .iconsList{
-cursor: pointer;
-display: flex;
-flex-direction: column;
-justify-content: space-evenly;
-height: 70%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 70%;
 }
 .icons {
-display: flex;
-padding: 24px;
-align-items: center;
-border-radius: 12px;
-transition: background-color 1s;
+  display: flex;
+  padding: 24px;
+  align-items: center;
+  border-radius: 12px;
+  transition: background-color 1s;
 }
 .icons:hover{
   background-color: #3b486d;
   font-weight: bold;
 }
 .itemText{
-display: none;
-margin-left: 50px;
-color: #F1F1F1;
-font-size: 36px;
+  display: none;
+  margin-left: 50px;
+  color: #F1F1F1;
+  font-size: 36px;
 }
 
 .nav:hover{
 
-& .navFooter, .itemText, .profName {
+& .nav, .navFooter, .itemText, .profName {
   display: block;
   animation-name: floating;
   animation-duration: 3s;
@@ -78,9 +76,9 @@ font-size: 36px;
   animation-name: layering;
 }
 & .navFooter{
-display: flex;
-flex-direction: column;
-justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
 }
 }
@@ -95,16 +93,16 @@ justify-content: space-between;
   height: 100%;
   animation-duration: 2s;
   animation-timing-function: ease-in-out;
+  z-index: 5;
 }
 
 .navFooter {
-display: none;
-padding: 24px 20px;
-height: 10%;
-
-color: #858688;
-font-size: 24px;
-font-weight: bold;
+  display: none;
+  padding: 24px 20px;
+  height: 10%;
+  color: #858688;
+  font-size: 24px;
+  font-weight: bold;
 }
  
 @keyframes floating {

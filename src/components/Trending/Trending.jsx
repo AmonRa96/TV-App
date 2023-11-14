@@ -11,24 +11,21 @@ export const Trending = () =>{
    return (
     <div className={classes.trending}>
       <div className={classes.trendingHeader}>
-      Trending Now
+        Trending Now
       </div>
       <div className={classes.swiper}>
-      <Splide 
-     options={ {
-      rewind: true,
-      width : "1700px",
-      rewindByDrag: true,
-      perPage: 8,
-    
-    } }
-    >       
-      {movies.map((m)=>{
-          return <Movie img={m.CoverImage} key={m.Id} id={m.Id}/>
-        })}
-       
-    </Splide>
-       
+        <Splide 
+          options={ {
+            rewind: true,
+            width : "95vw",
+            rewindByDrag: true,
+            perPage: 8,      
+        } }
+        >       
+        {movies.map((m)=>{
+            return <Movie img={m.CoverImage} key={m.Id} id={m.Id}/>
+        })}       
+        </Splide>       
       </div>
     </div>
 

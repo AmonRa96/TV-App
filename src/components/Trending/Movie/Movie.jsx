@@ -4,19 +4,20 @@ import { updateMovieData, showVideo } from '../../../store/movieDataSlice';
 import classes from "./Movie.module.css"
 
 export const Movie = ({img,id}) =>{
-const dispatch = useDispatch()
-    return (
-      <SplideSlide className={classes.movie} onClick={(e)=>{
-       e.preventDefault();
-      dispatch(updateMovieData(id));
-      dispatch(showVideo(false))
+const dispatch = useDispatch();
 
-      setTimeout(() => {
-        dispatch(showVideo(true))
-      }, 2000)
-      }}>
-          <img src={require(`../../../assets/${img}`)} alt="img" />
-         
-       </SplideSlide> 
+const handleClick = (e) =>{
+  e.preventDefault();
+  dispatch(updateMovieData(id));
+  dispatch(showVideo(false))
+   setTimeout(() => {
+    dispatch(showVideo(true))
+   }, 2000)
+};
+
+    return (
+      <SplideSlide className={classes.movie} onClick={handleClick}>
+        <img src={require(`../../../assets/${img}`)} alt="img" />         
+      </SplideSlide> 
     )
 }

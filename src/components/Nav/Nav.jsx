@@ -40,33 +40,32 @@ export const Nav = () =>{
 
   return (
   <>
-  <div className={classes.nav}>
-  <div className={classes.navBar}>
-    <div className={classes.profInfo}>
-    <img className={classes.profPic} src={profPic} alt="profPic"/>
-    <div className={classes.profName}>Daniel</div>
+    <div className={classes.nav}>
+    <div className={classes.navBar}>
+      <div className={classes.profInfo}>
+        <img className={classes.profPic} src={profPic} alt="profPic"/>
+        <div className={classes.profName}>Daniel</div>
+      </div>
+      <div className={classes.iconsList}>
+        {
+        MENU_ITEMS.map((i)=>{
+        return (
+          <div className={classes.icons}>
+            <img src={i.img} alt="icon" />
+            <div className={classes.itemText}>{i.txt}</div>
+          </div>
+        )
+        })
+        }
+      </div>
     </div>
-    <div className={classes.iconsList}>
-    {
-    MENU_ITEMS.map((i)=>{
-    return (
-    <div className={classes.icons}>
-    <img src={i.img} alt="icon" />
-    <div className={classes.itemText}>{i.txt}</div>
+    <div className={classes.navFooter}>
+      <div>LANGUAGE</div>
+      <div>GET HELP</div>
+      <div>EXIT</div>
     </div>
-    )
-    })
-    }
-  </div>
-
-  </div>
-<div className={classes.navFooter}>
-<div>LANGUAGE</div>
-<div>GET HELP</div>
-<div>EXIT</div>
-</div>
-</div>
-<div className={classes.layer} />
+    </div>
+  <div className={classes.layer} />
   </>
 
 )
