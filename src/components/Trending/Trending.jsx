@@ -1,7 +1,7 @@
 import data from "../../data.json";
 import { Movie } from "./Movie/Movie";
 import classes from "./Trending.module.css";
-import { Splide, SplideSlide } from '@splidejs/react-splide';
+import { Splide } from '@splidejs/react-splide';
 
 
 import '@splidejs/react-splide/css';
@@ -17,13 +17,12 @@ export const Trending = () =>{
       <Splide 
      options={ {
       rewind: true,
-      width : "1500px",
+      width : "1700px",
       rewindByDrag: true,
-      perPage: 7,
+      perPage: 8,
     
     } }
-    >
-       
+    >       
       {movies.map((m)=>{
           return <Movie img={m.CoverImage} key={m.Id} id={m.Id}/>
         })}

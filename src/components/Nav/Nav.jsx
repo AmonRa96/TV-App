@@ -5,7 +5,7 @@ import tvShows from "../../assets/icons/tvShows.png";
 import movies from "../../assets/icons/movies.png";
 import genres from "../../assets/icons/genres.png";
 import watchLater from "../../assets/icons/watchLater.png";
-import profPic from "../../assets/profPic.png";
+import profPic from "../../assets/profile.png";
 
 
 const MENU_ITEMS = [
@@ -43,7 +43,7 @@ export const Nav = () =>{
   <div className={classes.nav}>
   <div className={classes.navBar}>
     <div className={classes.profInfo}>
-    <img src={profPic} alt="profPic"/>
+    <img className={classes.profPic} src={profPic} alt="profPic"/>
     <div className={classes.profName}>Daniel</div>
     </div>
     <div className={classes.iconsList}>

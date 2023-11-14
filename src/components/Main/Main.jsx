@@ -16,7 +16,8 @@ function secondsToHms(d) {
 
 
 export const Main = () =>{
-const movieInfo = useSelector((state)=>state.movieData.movieData)
+const movieInfo = useSelector((state)=>state.movieData.movieData);
+console.log(movieInfo,"movieInfomovieInfo")
 
   return (
 <div className={classes.main}>
@@ -28,8 +29,8 @@ const movieInfo = useSelector((state)=>state.movieData.movieData)
     </div>
     <div className={classes.movieInfo}>
       <div>{movieInfo.ReleaseYear}</div>
-      <div>{movieInfo.MpaRating}</div>
-      <div>{secondsToHms(movieInfo.Duration)}</div>
+      <div className={classes.rating}>{movieInfo.MpaRating}</div>
+      <div className={classes.duration}>{secondsToHms(movieInfo.Duration)}</div>
     </div>
     <div className={classes.description}>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/> Incidunt similique eveniet veritatis <br/>iusto iure optio commodi quia voluptas nobis at.</div>
     <div className={classes.buttons}>
