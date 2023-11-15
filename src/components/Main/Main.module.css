@@ -1,31 +1,31 @@
 .main{ 
-    font-size: 30px;
     display: flex;
-    margin-top: 150px;
     flex-direction: column;
     align-items: flex-start;
+    margin-top: 150px;
+    font-size: 30px; 
 }
+
 .category{
     color: #858688;
+    text-transform: uppercase;
 }
+
 .movieInfo{
     display: flex;
     color: #F1F1F1;
-}
-.rating{
-    margin-left: 15px;
-}
-.duration{
-    margin-left: 15px;
 
+    & div {
+        margin: 0 5px;
+    }
 }
+
 .description{
+    margin-top: 10px;
+    margin-bottom: 33px; 
     color: #F1F1F1;
+}
 
-}
-.buttons{
-    margin-top: 33px; 
-}
 .playButton{
     width: 240px;
     height: 72px;
@@ -35,6 +35,7 @@
     font-weight: bold;
     cursor: pointer;
 }
+
 .moreInfoButton{
     margin-left: 72px;
     width: 240px;
@@ -45,5 +46,4 @@
     font-weight: bold;
     color: #F1F1F1;
     cursor: pointer;
-
 }

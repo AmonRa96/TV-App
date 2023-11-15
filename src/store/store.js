@@ -3,6 +3,6 @@ import movieDataReducer from "./movieDataSlice";
 
 export default configureStore({
   reducer: {
-    movieData: movieDataReducer,
+    movieSlice: movieDataReducer,
   },
 });
